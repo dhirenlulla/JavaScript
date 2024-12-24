@@ -60,3 +60,26 @@ console.log(stringNumber); // this will convert it to string
 console.log(typeof stringNumber); // this will return string 
 
 
+// ******************** Operations *********************
+
+let value = 3
+let negValue = -value
+console.log(negValue); // this will return -3
+
+console.log(2+2);
+console.log(2-2);
+console.log(2*2);
+console.log(2**3); // 2 raise to thepower of 3
+console.log(2/2);
+console.log(2%2);
+
+let str1 = "hello"
+let str2 = " dhiren"
+
+let str3 = str1 + str2
+console.log(str3);
+
+console.log(1 + "2"); // will return 12
+console.log("1"+ 2); // will return 12
+console.log("1"+ 2 + 2); // will return 122
+console.log(1 + 2 + "2"); // will return 32
