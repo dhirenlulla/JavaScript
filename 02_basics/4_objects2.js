@@ -53,3 +53,28 @@ console.log(Object.keys(instagram)); // return the array of keys in the object
 console.log(Object.values(instagram)); // return the values of the keys of the obejct
 console.log(Object.entries(instagram)); // this function makes  each & every key and its value in a separate array
 console.log(instagram.hasOwnProperty('isLoggedIn')); // this function return true if the property is available in the object
+
+// object de-structure 
+const course = {
+    coursename: "JavaScript",
+    price: "999",
+    courseinstructor: "dhiren"
+}
+
+// de-structure syntax
+// in curly braces, we specify the name of the property we want (we can also change the name of that property)
+// and after = we specify which object do we want to use 
+const {courseinstructor: instructor} = course // here we can give the object's properties name to any name of our choice(courseinstructor: instructor) 
+// it is optional
+console.log(instructor);
+
+// About JSON ->
+// this is a json 
+// in JSON, the keys and its values are the type of strings
+// {
+//     "name": "dhiren",
+//     "age": "18",
+//     "college": "byk"
+// }
+
+// Note: random user me, json formatter can help understand the json concept
