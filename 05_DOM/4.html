@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class = "language">
+        <li>JavaScript</li>
+    </ul>
+    
+</body>
+<script>
+    function addLangauge(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLangauge("python")
+    addLangauge("typescript")
+
+    // optimised approach for the above function
+    function addOptiLanguage(langName){
+        const li = document.createElement('li');
+        const addText = document.createTextNode(langName)
+        li.appendChild(addText)
+        document.querySelector('.language').appendChild(li);
+    }
+    addOptiLanguage('golang')
+    
+    // editing the values we added to the document 
+    // editing the 2nd child
+    const secondLang = document.querySelector("li:nth-child(2)")
+    const newli = document.createElement('li')
+    newli.textContent = "Mojo"
+    secondLang.replaceWith(newli)
+
+    // first we selected the lement we want to edit, then created a 
+    // new element, assigned the value we want to replace "mojo"
+    // and then we replaced the selected element with new element
+
+    // lets see another way of editing the element
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>typescript</li>'
+
+    // removing the elements
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+
+</script>
+</html>
