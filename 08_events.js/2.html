@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Fundamentals</title>
+</head>
+<body>
+    <h1>Async Fundamentals</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setTimeout(function(){
+    //     console.log("Dhiren");
+    // }, 2000)
+
+    // we can also give reference of the function to the setTimeout
+    // const sayDhiren = function(){
+    //     console.log("Dhiren")
+    // }
+    // setTimeout(sayDhiren, 2000)
+
+    const changeText = function() {
+        document.querySelector('h1').innerHTML = "projects using async fundamentals"
+    }
+    const chnageMe = setTimeout(changeText, 2000)
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(chnageMe)
+        console.log("STOPPED")
+    })
+</script>
+</html>
